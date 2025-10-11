@@ -124,13 +124,13 @@ button a:hover {
     color: fuchsia;
   }
   .header .text-4 {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
   }
 
   .text-5 span {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
     font-style: italic;
     font-weight: bold;
