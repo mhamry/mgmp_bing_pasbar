@@ -113,16 +113,19 @@ button a:hover {
     color: fuchsia;
     font-weight: bold;
     line-height: 60px;
+    margin-top: 30px;
   }
   .header .text-2 {
     font-size: 40px;
     color: fuchsia;
     margin-top: 30px;
+    margin-bottom: 30px;
   }
   .header .text-3 {
     font-size: 40px;
     color: fuchsia;
-    line-height: 30px;
+    line-height: 38px;
+    margin-bottom: 20px;
   }
   .header .text-4 {
     font-size: 25px;
@@ -139,5 +142,18 @@ button a:hover {
 
   .about img {
     width: 300px;
+  }
+
+  .medsos p,
+  .sekretariat p,
+  .kontak p {
+    font-size: 13px;
+    line-height: 8px;
+  }
+  .medsos,
+  .sekretariat,
+  .kontak {
+    line-height: 5px;
+    margin-bottom: 10px;
   }
 }
