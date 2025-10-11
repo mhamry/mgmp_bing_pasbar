@@ -109,7 +109,7 @@ button a:hover {
     padding: 30px;
   }
   .header .text-1 {
-    font-size: 90px;
+    font-size: 70px;
     color: fuchsia;
     font-weight: bold;
     line-height: 80px;
@@ -130,7 +130,7 @@ button a:hover {
 
   .text-5 span {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     position: relative;
     font-style: italic;
     font-weight: bold;
