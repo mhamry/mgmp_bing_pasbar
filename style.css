@@ -135,4 +135,8 @@ button a:hover {
     font-style: italic;
     font-weight: bold;
   }
+
+  .about img {
+    width: 300px;
+  }
 }
