@@ -104,6 +104,10 @@ button a:hover {
   color: white;
 }
 
+.footer1 {
+  background-color: #777;
+}
+
 @media (max-width: 578px) {
   .header {
     padding: 30px;
@@ -112,7 +116,7 @@ button a:hover {
     font-size: 70px;
     color: fuchsia;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 70px;
     margin-top: 30px;
   }
   .header .text-2 {
@@ -124,7 +128,7 @@ button a:hover {
   .header .text-3 {
     font-size: 40px;
     color: fuchsia;
-    line-height: 38px;
+    line-height: 50px;
     margin-bottom: 20px;
   }
   .header .text-4 {
