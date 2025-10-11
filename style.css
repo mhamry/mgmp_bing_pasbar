@@ -130,7 +130,17 @@ button a:hover {
   background-position: center;
   box-sizing: border-box;
   background-size: cover;
-  height: 100vh;
+  height: 500px;
+}
+
+/* Olympiad */
+.header-olympiad {
+  background-image: url(image/olym.png);
+  background-position: center;
+  box-sizing: border-box;
+  background-size: cover;
+  height: 500px;
+  background-color: #0dded3;
 }
 
 @media (max-width: 578px) {
@@ -193,5 +203,9 @@ button a:hover {
     margin-top: 100px;
     line-height: 90px;
     margin-bottom: 30px;
+  }
+
+  .textdua {
+    font-size: 40px;
   }
 }
