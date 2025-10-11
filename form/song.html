@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="header-speech">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 mt-5">
+            <div class="textsatu">English Song Competition</div>
+            <div class="textdua">English Festival 2026</div>
+            <div class="text-5">.<span class="type"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="form p-3 mt-5">
+      <div class="container">
+        <div class="row justify-content-center d-flex">
+          <div class="col-sm-6">
+            <h2 class="mb-3">Form Pendaftaran English Song Competition</h2>
+            <p>
+              Isilah Form dengan data yang benar <br />Isian data pada form ini akan digunakan sebagai data identitas peserta pada sertifikat, jika ada kesalahan pada penulisan nama dan data lainya sepenuhnya tanggung jawab dari peserta.
+            </p>
+          </div>
+        </div>
+        <div class="row p-3 justify-content-center d-flex">
+          <div class="col-sm-6">
+            <form action="">
+              <div class="mb-3">
+                <label for="nama" class="form-label fw-bold">Nama Peserta</label>
+                <input type="text" class="form-control" id="nama" name="nama" required autocomplete="off" autofocus />
+              </div>
+              <div class="mb-3">
+                <label for="sekolah" class="form-label fw-bold">Sekolah</label>
+                <input type="text" class="form-control" id="sekolah" name="sekolah" required />
+              </div>
+              <div class="mb-3">
+                <label for="kelas" class="form-label fw-bold">Kelas</label>
+                <select class="form-select" id="kelas" name="kelas" required>
+                  <option selected>Pilih Kelas</option>
+                  <option value="VII">VII</option>
+                  <option value="VIII">VIII</option>
+                  <option value="IX">IX</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-bold">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="wa" class="form-label fw-bold">No.WA</label>
+                <input type="number" class="form-control" id="wa" name="wa" required />
+              </div>
+              <div class="mb-3">
+                <label for="bukti" class="form-label fw-bold">Bukti Donasi</label><br />
+
+                <input type="file" class="form-control" id="bukti" name="bukti" required />
+                <span class="secondary text-small">Upload Bukti transfer dengan ekstensi JPG PNG atau JPEG</span>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary fw-bold">KIRIM</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#fff"
+          fill-opacity="1"
+          d="M0,32L60,74.7C120,117,240,203,360,224C480,245,600,203,720,165.3C840,128,960,96,1080,90.7C1200,85,1320,107,1380,117.3L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+        ></path>
+      </svg>
+
+      <div class="container">
+        <div class="row p-1">
+          <div class="col-sm-4 kontak">
+            <h3 class="title">Kontak</h3>
+            <p><i class="fa-brands fa-whatsapp"></i> <span>081266974500</span></p>
+            <p><i class="fa-solid fa-envelope-circle-check"></i> <span>mgmpbing_pasbar@gmail.com</span></p>
+            <p><i class="fa-solid fa-globe"></i> <span>www.mgmpbing_pasbar.com</span></p>
+            <p></p>
+          </div>
+          <div class="col-sm-4 sekretariat">
+            <h3 class="title">Sekretariat</h3>
+            <p>Jln.Padang Tujuh, Simpang Empat, Pasaman Barat</p>
+            <p>Provinsi Sumatera Barat</p>
+            <p>Indonesia</p>
+          </div>
+          <div class="col-sm-4 medsos">
+            <h3 class="title">Kunjungi Kami</h3>
+            <p><i class="fa-brands fa-facebook"></i> facebook.mgmpbing_pasbar.com</p>
+            <p><i class="fa-brands fa-square-twitter"></i> twitter.mgmpbing_pasbar.com</p>
+            <p><i class="fa-brands fa-square-instagram"></i> instagram.mgmpbing_pasbar.com</p>
+            <p><i class="fa-brands fa-tiktok"></i> tiktok.mgmpbing_pasbar.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer1">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center p-4 text-white">Copyright©️2025.mgmpbing_pasbar</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

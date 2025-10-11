@@ -130,7 +130,7 @@ button a:hover {
   background-position: center;
   box-sizing: border-box;
   background-size: cover;
-  height: 500px;
+  height: 100vh;
 }
 
 /* Olympiad */
@@ -139,7 +139,17 @@ button a:hover {
   background-position: center;
   box-sizing: border-box;
   background-size: cover;
-  height: 500px;
+  height: 100vh;
+  background-color: #0dded3;
+}
+
+/* speech */
+.header-speech {
+  background-image: url(image/speech.png);
+  background-position: center;
+  box-sizing: border-box;
+  background-size: cover;
+  height: 100vh;
   background-color: #0dded3;
 }
 
@@ -207,5 +217,27 @@ button a:hover {
 
   .textdua {
     font-size: 40px;
+  }
+
+  .header-speech {
+    background-image: url(image/speech.png);
+    background-position: center;
+    box-sizing: border-box;
+    background-size: cover;
+    height: 100vh;
+    background-color: #0dded3;
+    height: 60vh; /* atau bisa 100vh tergantung kebutuhan */
+    background-position: top; /* kadang lebih pas di HP */
+  }
+
+  .header-olympiad {
+    background-image: url(image/olym.png);
+    background-position: center;
+    box-sizing: border-box;
+    background-size: cover;
+    height: 100vh;
+    background-color: #0dded3;
+    height: 60vh; /* atau bisa 100vh tergantung kebutuhan */
+    background-position: top; /* kadang lebih pas di HP */
   }
 }
