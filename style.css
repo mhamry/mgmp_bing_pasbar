@@ -153,6 +153,11 @@ button a:hover {
   background-color: #0dded3;
 }
 
+.card-text {
+  font-weight: lighter;
+  color: #444;
+}
+
 @media (max-width: 578px) {
   .header {
     padding: 30px;
