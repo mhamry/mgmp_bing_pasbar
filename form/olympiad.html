@@ -45,11 +45,7 @@
         </div>
         <div class="row p-3 justify-content-center d-flex">
           <div class="col-sm-6">
-            <div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
-              <strong>Terima kasih atas partisipasinya!</strong> Data anda sudah terkirim.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            <form action="">
+            <form action="" name="Olympiad-form-response" enctype="multipart/form-data">
               <div class="mb-3">
                 <label for="nama" class="form-label fw-bold">Nama Peserta</label>
                 <input type="text" class="form-control" id="nama" name="nama" required autocomplete="off" autofocus />
@@ -83,6 +79,10 @@
                 <span class="secondary text-small">Upload Bukti transfer dengan ekstensi JPG PNG atau JPEG</span>
               </div>
               <div class="mb-3">
+                <div class="alert alert-warning alert-dismissible fade show d-none my-alert" role="alert">
+                  <strong>Terima kasih atas partisipasinya!</strong> Data anda sudah terkirim.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <button type="submit" class="btn btn-primary fw-bold btn-kirim">KIRIM</button>
                 <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                   <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -138,5 +138,32 @@
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwdBNUnI-WYa1xeMRMS45b22XYK7Wqip1yTtiiUUGiHpb8y0zOFCbmp-MmFbGxFofTilQ/exec";
+      const form = document.forms["Olympiad-form-response"];
+      const btnLoading = document.querySelector(".btn-loading");
+      const btnKirim = document.querySelector(".btn-kirim");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        //tampil kan btn-loading dan hilangkan btn-kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            //tampil kan btn-kirim dan hilangkan btn-loading
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            //tampilkan alert
+            myAlert.classList.toggle("d-none");
+            //reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
