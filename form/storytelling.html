@@ -45,11 +45,11 @@
         </div>
         <div class="row p-3 justify-content-center d-flex">
           <div class="col-sm-6">
-            <div class="alert alert-warning alert-dismissible fade show d-none" role="alert">
+            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
               <strong>Terima kasih atas partisipasinya!</strong> Data anda sudah terkirim.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <form action="">
+            <form action="" name="submit-to-google-sheet" enctype="multipart/form-data">
               <div class="mb-3">
                 <label for="nama" class="form-label fw-bold">Nama Peserta</label>
                 <input type="text" class="form-control" id="nama" name="nama" required autocomplete="off" autofocus />
@@ -79,7 +79,7 @@
               <div class="mb-3">
                 <label for="bukti" class="form-label fw-bold">Bukti Donasi</label><br />
 
-                <input type="file" class="form-control" id="bukti" name="bukti" required />
+                <input type="file" class="form-control" id="bukti" name="buktitransfer" required />
                 <span class="secondary text-small">Upload Bukti transfer dengan ekstensi JPG PNG atau JPEG</span>
               </div>
               <div class="mb-3">
@@ -139,5 +139,32 @@
       </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzkPm4q9HXbJjt_ZxFOyRm1jo5zz0YdhFU8hIRVF8bhqqi3Ze7oKJKmQXbRMs78Ye6A/exec";
+
+      const form = document.forms["submit-to-google-sheet"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        //hilangkan btn-kirim tampilkan btn-loading
+        btnKirim.classList.toggle("d-none");
+        btnLoading.classList.toggle("d-none");
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            //hilangkan btn-loading tampilkan btn-kirim
+            btnKirim.classList.toggle("d-none");
+            btnLoading.classList.toggle("d-none");
+            myAlert.classList.toggle("d-none");
+            //reset form
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
