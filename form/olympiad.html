@@ -45,7 +45,14 @@
         </div>
         <div class="row p-3 justify-content-center d-flex">
           <div class="col-sm-6">
-            <form action="" name="Olympiad-form-response" enctype="multipart/form-data">
+            <form
+              name="Olympiad-form-response"
+              action="https://script.google.com/macros/s/AKfycbwdBNUnI-WYa1xeMRMS45b22XYK7Wqip1yTtiiUUGiHpb8y0zOFCbmp-MmFbGxFofTilQ/exec"
+              method="POST"
+              enctype="multipart/form-data"
+              target="hidden_iframe"
+              onsubmit="submitted=true;"
+            >
               <div class="mb-3">
                 <label for="nama" class="form-label fw-bold">Nama Peserta</label>
                 <input type="text" class="form-control" id="nama" name="nama" required autocomplete="off" autofocus />
@@ -90,6 +97,7 @@
                 </button>
               </div>
             </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"></iframe>
           </div>
         </div>
       </div>
@@ -150,19 +158,12 @@
         //tampil kan btn-loading dan hilangkan btn-kirim
         btnLoading.classList.toggle("d-none");
         btnKirim.classList.toggle("d-none");
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            //tampil kan btn-kirim dan hilangkan btn-loading
-            btnLoading.classList.toggle("d-none");
-            btnKirim.classList.toggle("d-none");
-            //tampilkan alert
-            myAlert.classList.toggle("d-none");
-            //reset form
-            form.reset();
-            console.log("Success!", response);
-          })
-          .catch((error) => console.error("Error!", error.message));
+        setTimeout(() => {
+          btnLoading.classList.add("d-none");
+          btnKirim.classList.remove("d-none");
+          myAlert.classList.remove("d-none");
+          form.reset();
+        }, 3000);
       });
     </script>
   </body>
