@@ -33,6 +33,10 @@ html {
   color: white;
 }
 
+.text-5 {
+  height: 100px;
+}
+
 .text-5 span {
   color: white;
   font-size: 60px;
@@ -45,10 +49,9 @@ html {
   position: absolute;
   content: "";
   /* width: 4px;
-
   top: 50%;
-  height: 50%; */
-  right: -39px;
+  height: 50%;
+  right: -39px; */
   background-color: white;
   transform: translateY(-45%);
   animation: blink 1s infinite;
