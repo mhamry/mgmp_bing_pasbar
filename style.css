@@ -104,6 +104,10 @@ button a:hover {
   background-color: #0dded3;
 }
 
+.btn-1 {
+  margin-top: -50px;
+}
+
 .footer {
   background-color: #333;
   color: white;
@@ -251,5 +255,9 @@ button a:hover {
     background-color: #0dded3;
     height: 60vh; /* atau bisa 100vh tergantung kebutuhan */
     background-position: top; /* kadang lebih pas di HP */
+  }
+
+  .btn-1 {
+    margin-top: -50px;
   }
 }
