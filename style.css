@@ -189,6 +189,10 @@ button a:hover {
     color: white;
   }
 
+  .text-5 {
+    height: 50px;
+  }
+
   .text-5 span {
     color: white;
     font-size: 20px;
