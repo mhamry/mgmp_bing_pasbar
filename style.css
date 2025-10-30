@@ -260,4 +260,10 @@ button a:hover {
   .btn-1 {
     margin-top: -50px;
   }
+
+  .image {
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    width: 300px;
+  }
 }
