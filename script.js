@@ -24,3 +24,16 @@ function typeEffect() {
   }
 }
 typeEffect();
+
+function runningImage(selector, direction, speed) {
+  const track = document.querySelector(selector);
+  track.innerHTML += track.innerHTML;
+  const originWidth = track.scrollWidth / 2;
+  track.style.setProperty("--move", `-${originWidth}px`);
+  track.style.animation = `run-${direction} ${originWidth / speed}s linear infinite`;
+}
+
+window.onload = () => {
+  runningImage(".track-right", "right", 20);
+  runningImage(".track-left", "left", 40);
+};

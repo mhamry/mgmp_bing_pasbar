@@ -165,6 +165,40 @@ button a:hover {
   color: #444;
 }
 
+.running-image {
+  width: 700px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.track-right,
+.track-left {
+  display: flex;
+  height: 150px;
+  margin-bottom: 20px;
+}
+.track-right img,
+.track-left img {
+  width: 150px;
+  margin: 1px;
+}
+
+@keyframes run-right {
+  from {
+    transform: translateX(var(--move));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes run-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--move));
+  }
+}
 @media (max-width: 578px) {
   .header {
     padding: 30px;
@@ -261,9 +295,9 @@ button a:hover {
     margin-top: -50px;
   }
 
-  .image {
-    /* padding-left: 20px;
-    padding-right: 20px; */
-    width: 300px;
+  .running-image {
+    width: 400px;
+    margin: 30px auto;
+    overflow: hidden;
   }
 }
