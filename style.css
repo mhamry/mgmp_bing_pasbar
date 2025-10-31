@@ -166,7 +166,7 @@ button a:hover {
 }
 
 .running-image {
-  width: 700px;
+  width: 800px;
   margin: 30px auto;
   overflow: hidden;
 }
@@ -296,7 +296,7 @@ button a:hover {
   }
 
   .running-image {
-    width: 320px;
+    width: 400px;
     margin: 30px auto;
     overflow: hidden;
   }

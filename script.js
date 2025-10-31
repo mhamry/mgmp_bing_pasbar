@@ -31,6 +31,16 @@ function runningImage(selector, direction, speed) {
   const originWidth = track.scrollWidth / 2;
   track.style.setProperty("--move", `-${originWidth}px`);
   track.style.animation = `run-${direction} ${originWidth / speed}s linear infinite`;
+
+  const images = track.querySelectorAll(" img");
+  images.forEach(function (img) {
+    img.addEventListener("mouseover", () => {
+      track.style.animationPlayState = "paused";
+    });
+    img.addEventListener("mouseleave", () => {
+      track.style.animationPlayState = "running";
+    });
+  });
 }
 
 window.onload = () => {
